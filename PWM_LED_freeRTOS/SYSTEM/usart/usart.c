@@ -107,10 +107,10 @@ void uart_init(u32 bound){
   USART_Cmd(USART1, ENABLE);                    //使能串口1 
 
 }
-
+u8 Res;
 void USART1_IRQHandler(void)                	//串口1中断服务程序
 	{
-	u8 Res;
+	
 
 	if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)  //接收中断(接收到的数据必须是0x0d 0x0a结尾)
 	{

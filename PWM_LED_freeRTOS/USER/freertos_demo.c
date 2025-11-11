@@ -142,8 +142,8 @@ void task1(void* pvParameters)
 		
 		PWM_SetCompare1(test[1]);
 		
-		printf("led is light\n/t");
-//		vTaskDelay(10);
+//		printf("led is light\n/t");
+		vTaskDelay(10);
 	}
 }
 
