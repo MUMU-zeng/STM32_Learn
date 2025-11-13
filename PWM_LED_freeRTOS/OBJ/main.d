@@ -33,7 +33,7 @@
 ..\obj\main.o: ..\SYSTEM\delay\delay.h
 ..\obj\main.o: ..\SYSTEM\usart\usart.h
 ..\obj\main.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\main.o: ..\USER\freertos_demo.h
 ..\obj\main.o: ..\HARDWARE\KEY\key.h
 ..\obj\main.o: ..\HARDWARE\TIMER\timer.h
-..\obj\main.o: freertos_demo.h
 ..\obj\main.o: ..\HARDWARE\TIMER\PWM.h

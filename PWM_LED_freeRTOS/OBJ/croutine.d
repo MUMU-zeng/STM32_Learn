@@ -34,6 +34,7 @@
 ..\obj\croutine.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\croutine.o: ..\SYSTEM\usart\usart.h
 ..\obj\croutine.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\croutine.o: ..\USER\freertos_demo.h
 ..\obj\croutine.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\croutine.o: ..\FreeRTOS\include\portable.h
 ..\obj\croutine.o: ..\FreeRTOS\include\deprecated_definitions.h

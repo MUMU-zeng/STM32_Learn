@@ -35,6 +35,7 @@
 ..\obj\timers.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\timers.o: ..\SYSTEM\usart\usart.h
 ..\obj\timers.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\timers.o: ..\USER\freertos_demo.h
 ..\obj\timers.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\timers.o: ..\FreeRTOS\include\portable.h
 ..\obj\timers.o: ..\FreeRTOS\include\deprecated_definitions.h

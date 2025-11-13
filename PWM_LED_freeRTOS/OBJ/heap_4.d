@@ -35,6 +35,7 @@
 ..\obj\heap_4.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\heap_4.o: ..\SYSTEM\usart\usart.h
 ..\obj\heap_4.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\heap_4.o: ..\USER\freertos_demo.h
 ..\obj\heap_4.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\heap_4.o: ..\FreeRTOS\include\portable.h
 ..\obj\heap_4.o: ..\FreeRTOS\include\deprecated_definitions.h

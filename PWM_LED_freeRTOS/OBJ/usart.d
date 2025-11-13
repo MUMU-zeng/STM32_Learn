@@ -31,3 +31,4 @@
 ..\obj\usart.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\usart.o: ..\SYSTEM\usart\usart.h
 ..\obj\usart.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\usart.o: ..\USER\freertos_demo.h

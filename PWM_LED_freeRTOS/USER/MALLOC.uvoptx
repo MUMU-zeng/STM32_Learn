@@ -182,22 +182,22 @@
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>test,0x0A</ItemText>
+          <ItemText>key,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>key,0x0A</ItemText>
+          <ItemText>Res,0x10</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Res,0x10</ItemText>
+          <ItemText>USART_RX_STA</ItemText>
         </Ww>
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>USART_RX_STA</ItemText>
+          <ItemText>test111</ItemText>
         </Ww>
         <Ww>
           <count>4</count>

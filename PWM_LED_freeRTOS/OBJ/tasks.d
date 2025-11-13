@@ -36,6 +36,7 @@
 ..\obj\tasks.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\tasks.o: ..\SYSTEM\usart\usart.h
 ..\obj\tasks.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\tasks.o: ..\USER\freertos_demo.h
 ..\obj\tasks.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\tasks.o: ..\FreeRTOS\include\portable.h
 ..\obj\tasks.o: ..\FreeRTOS\include\deprecated_definitions.h

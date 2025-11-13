@@ -35,6 +35,7 @@
 ..\obj\event_groups.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\event_groups.o: ..\SYSTEM\usart\usart.h
 ..\obj\event_groups.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\event_groups.o: ..\USER\freertos_demo.h
 ..\obj\event_groups.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\event_groups.o: ..\FreeRTOS\include\portable.h
 ..\obj\event_groups.o: ..\FreeRTOS\include\deprecated_definitions.h

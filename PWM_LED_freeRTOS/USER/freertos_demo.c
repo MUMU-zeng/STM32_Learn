@@ -59,7 +59,7 @@ void task2(void* pvParameters);	//任务函数
 TaskHandle_t Task3_Handler;/*任务句柄*/
 void task3(void* pvParameters);	//任务函数
 
-uint16_t test[6];
+uint16_t test111[6];
 /*****************************************************************************/
 /*LCD刷屏时使用的颜色*/
 //uint16_t lcd_discolor[11]={ WHITE, BLACK, BLUE, RED,
@@ -129,21 +129,21 @@ void task1(void* pvParameters)
 	while(1)
 	{
 		
-		if(test[1] >= 100)
+		if(test111[1] >= 100)
 		{
 			pwm_flag = 1;
 		}
-		else if (test[1] <= 0)
+		else if (test111[1] <= 0)
 		{
 			pwm_flag = 0;
 		}
-		pwm_flag ? test[1]-- : test[1]++;
+		pwm_flag ? test111[1]-- : test111[1]++;
 //		LED0 ? LED0_OFF : LED0_ON;
 		
-		PWM_SetCompare1(test[1]);
+		PWM_SetCompare1(test111[1]);
 		
-//		printf("led is light\n/t");
-		vTaskDelay(10);
+		printf("led is light\n");
+		vTaskDelay(1000);
 	}
 }
 
@@ -151,8 +151,8 @@ void task2(void* pvParameters)
 {
 	while(1)
 	{
-		test[2]++;
-		if(test[2] > 1000)	test[2] = 0;
+		test111[2]++;
+		if(test111[2] > 1000)	test111[2] = 0;
 		
 //		LED1 ? LED1_OFF : LED1_ON;
 		vTaskDelay(500);
@@ -163,9 +163,9 @@ void task3(void* pvParameters)
 {
 	while(1)
 	{
-		test[0] = KEY0;
-		test[3]++;
-		if(test[3] > 1000)	test[3] = 0;
+		test111[0] = KEY0;
+		test111[3]++;
+		if(test111[3] > 1000)	test111[3] = 0;
 		if(KEY0)
 		{
 			if(Task1_Handler != NULL)
