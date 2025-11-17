@@ -22,22 +22,27 @@ Dialog DLL:      TCM.DLL V1.14.8.0
  
 <h2>Project:</h2>
 D:\Program Files(64bit)\Keil5\project\PWM_LED_freeRTOS\USER\MALLOC.uvprojx
-Project File Date:  11/11/2025
+Project File Date:  11/13/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 1 (build 61)', folder: 'D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin'
 Build target 'FreeRTOS'
-compiling freertos_demo.c...
-linking...
-Program Size: Code=24380 RO-data=336 RW-data=200 ZI-data=6176  
-FromELF: creating hex file...
-"..\OBJ\MALLOC.axf" - 0 Error(s), 0 Warning(s).
+compiling usart.c...
+..\SYSTEM\usart\usart.c(203): error:  #20: identifier "num" is undefined
+  	while(Data[num] != '\0')	SendByte(USART1, Data[num++]);
+..\SYSTEM\usart\usart.c(201): warning:  #177-D: variable "length" was declared but never referenced
+  	uint8_t length = 0;
+..\SYSTEM\usart\usart.c(202): warning:  #177-D: variable "stringNumber" was declared but never referenced
+  	char *stringNumber = "";
+..\SYSTEM\usart\usart.c: 2 warnings, 1 error
+"..\OBJ\MALLOC.axf" - 1 Error(s), 2 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   D:\Program Files(64bit)\Keil5\project\PWM_LED_freeRTOS\USER\RTE
   D:\Program Files(64bit)\Keil5\exe\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include
 
 <h2>Collection of Component Files used:</h2>
+Target not created.
 Build Time Elapsed:  00:00:00
 </pre>
 </body>

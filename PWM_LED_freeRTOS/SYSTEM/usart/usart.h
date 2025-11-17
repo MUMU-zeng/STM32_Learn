@@ -35,6 +35,11 @@ extern u16 USART_RX_STA;         		//接收状态标记
 extern uint16_t test111[6];
 //如果想串口中断接收，请不要注释以下宏定义
 void uart_init(u32 bound);
+void SendByte(USART_TypeDef* USARTx, uint16_t Data);
+void SendArray(USART_TypeDef* USARTx, uint16_t Data[], uint8_t length);
+void SendString(USART_TypeDef* USARTx, char *Data);
+
+
 #endif
 
 

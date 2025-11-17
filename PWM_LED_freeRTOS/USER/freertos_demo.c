@@ -137,13 +137,16 @@ void task1(void* pvParameters)
 		{
 			pwm_flag = 0;
 		}
-		pwm_flag ? test111[1]-- : test111[1]++;
+		test111[1] = pwm_flag ? test111[1] - 10 : test111[1] + 10;
 //		LED0 ? LED0_OFF : LED0_ON;
 		
 		PWM_SetCompare1(test111[1]);
 		
-		printf("led is light\n");
-		vTaskDelay(1000);
+		//printf("led is light%d\r\n", sizeof(test111));
+		//USART_SendData(USART1, 0x41);
+		//SendArray(USART1, test111, 6);
+		SendString(USART1, "Œ“ «MUMU");
+		vTaskDelay(500);
 	}
 }
 

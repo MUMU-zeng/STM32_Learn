@@ -66,7 +66,7 @@ u8 USART_RX_BUF[USART_REC_LEN];     //接收缓冲,最大USART_REC_LEN个字节.
 //bit14，	接收到0x0d
 //bit13~0，	接收到的有效字节数目
 u16 USART_RX_STA=0;       //接收状态标记	  
-  
+
 void uart_init(u32 bound){
   //GPIO端口设置
   GPIO_InitTypeDef GPIO_InitStructure;
@@ -137,11 +137,71 @@ void USART1_IRQHandler(void)                	//串口1中断服务程序
 		}   		 
 	} 
 
-	if(USART_GetITStatus(USART1, USART_IT_TC) != RESET)  //发送数据
-	{
+//	if(USART_GetITStatus(USART1, USART_IT_TC) != RESET)  //发送数据
+//	{
 
-	} 
+//	} 
 
 } 
+
+
+/*函数名：SendByte
+ *函数功能：发送一字节数据
+ *函数参数：
+		USARTx:要发送数据的串口
+			Data：要发送的数据
+ *函数返回值：void
+*/
+
+void SendByte(USART_TypeDef* USARTx, uint16_t Data)
+{
+	USART_SendData(USART1, Data);
+	while(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
+}
+
+/*函数名：SendArray
+ *函数功能：发送数组
+ *函数参数：
+		USARTx:要发送数据的串口
+			Data：要发送的数据
+		length：数组长度
+ *函数返回值：void
+*/
+
+void SendArray(USART_TypeDef* USARTx, uint16_t Data[], uint8_t length)
+{
+	uint8_t num = 0;
+	while(num < length)	SendByte(USART1, Data[num++]);
+}
+
+/*函数名：SendString
+ *函数功能：发送字符串
+ *函数参数：
+		USARTx:要发送数据的串口
+			Data：要发送的字符串
+ *函数返回值：void
+*/
+
+void SendString(USART_TypeDef* USARTx, char *Data)
+{
+	uint8_t num = 0;
+	while(Data[num] != '\0')	SendByte(USART1, Data[num++]);
+}
+
+/*函数名：SendNumber
+ *函数功能：发送数字
+ *函数参数：
+		USARTx:要发送数据的串口
+			Data：要发送的数字
+ *函数返回值：void
+*/
+
+void SendNumber(USART_TypeDef* USARTx, uint32_t Data)
+{
+	uint8_t length = 0;
+	char *stringNumber = "";
+	while(Data[num] != '\0')	SendByte(USART1, Data[num++]);
+}
+
 #endif	
 
