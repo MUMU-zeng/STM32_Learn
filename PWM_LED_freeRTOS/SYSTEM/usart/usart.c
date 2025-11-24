@@ -107,40 +107,41 @@ void uart_init(u32 bound){
   USART_Cmd(USART1, ENABLE);                    //使能串口1 
 
 }
-u8 Res;
+
+
+uint8_t Res;
+uint8_t RxData[USART_PACK_LEN] = {0};
+uint8_t pRxData = 0;
+uint8_t TxData[USART_PACK_LEN] = {1, 2, 3, 4};
 void USART1_IRQHandler(void)                	//串口1中断服务程序
 {
 	test111[5]++;
 	if (test111[5] > 10000) test111[5] = 0;
 
-	if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)  //接收中断(接收到的数据必须是0x0d 0x0a结尾)
+	if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
 	{
-		Res =USART_ReceiveData(USART1);	//读取接收到的数据
-
-		if((USART_RX_STA&0x8000)==0)//接收未完成
+		Res = USART_ReceiveData(USART1);
+		
+		if (USART_RX_STA == 0 && Res == 0xFF)	//包头
 		{
-			if(USART_RX_STA&0x4000)//接收到了0x0d
+			pRxData = 0;
+			USART_RX_STA = 1;
+		}
+		else if (USART_RX_STA == 1)	//数据包
+		{
+			RxData[pRxData++] = Res;
+			if (pRxData >= USART_PACK_LEN)
 			{
-			if(Res!=0x0a)USART_RX_STA=0;//接收错误,重新开始
-			else USART_RX_STA|=0x8000;	//接收完成了 
+				USART_RX_STA = 2;
+				pRxData = 0;
 			}
-			else //还没收到0X0D
-			{	
-				if(Res==0x0d)USART_RX_STA|=0x4000;
-				else
-				{
-					USART_RX_BUF[USART_RX_STA&0X3FFF]=Res ;
-					USART_RX_STA++;
-					if(USART_RX_STA>(USART_REC_LEN-1))USART_RX_STA=0;//接收数据错误,重新开始接收	  
-				}		 
-			}
-		}   		 
-	} 
-
-//	if(USART_GetITStatus(USART1, USART_IT_TC) != RESET)  //发送数据
-//	{
-
-//	} 
+		}
+		else if (USART_RX_STA == 2 && Res == 0xFE)	//包尾
+		{
+			USART_RX_STA = 0;
+		}
+		
+	}
 
 } 
 
@@ -153,7 +154,7 @@ void USART1_IRQHandler(void)                	//串口1中断服务程序
  *函数返回值：void
 */
 
-void SendByte(USART_TypeDef* USARTx, uint16_t Data)
+void SendByte(USART_TypeDef* USARTx, uint8_t Data)
 {
 	USART_SendData(USART1, Data);
 	while(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
@@ -168,7 +169,7 @@ void SendByte(USART_TypeDef* USARTx, uint16_t Data)
  *函数返回值：void
 */
 
-void SendArray(USART_TypeDef* USARTx, uint16_t Data[], uint8_t length)
+void SendArray(USART_TypeDef* USARTx, uint8_t Data[], uint8_t length)
 {
 	uint8_t num = 0;
 	while(num < length)	SendByte(USART1, Data[num++]);
@@ -188,20 +189,21 @@ void SendString(USART_TypeDef* USARTx, char *Data)
 	while(Data[num] != '\0')	SendByte(USART1, Data[num++]);
 }
 
-/*函数名：SendNumber
- *函数功能：发送数字
+/*函数名：SendPack
+ *函数功能：增加包头包尾发送数据包
  *函数参数：
 		USARTx:要发送数据的串口
-			Data：要发送的数字
+			Data：要发送的字符串
  *函数返回值：void
 */
 
-void SendNumber(USART_TypeDef* USARTx, uint32_t Data)
+void SendPack(USART_TypeDef* USARTx, uint8_t Data[])
 {
-	uint8_t length = 0;
-	char *stringNumber = "";
-	while(Data[num] != '\0')	SendByte(USART1, Data[num++]);
+	SendByte(USART1, 0xFF);
+	SendArray(USART1, Data, USART_PACK_LEN);
+	SendByte(USART1, 0xFE);
 }
+
 
 #endif	
 

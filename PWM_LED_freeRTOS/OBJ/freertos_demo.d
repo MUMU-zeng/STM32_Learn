@@ -32,6 +32,7 @@
 ..\obj\freertos_demo.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
 ..\obj\freertos_demo.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\freertos_demo.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\freertos_demo.o: ..\USER\freertos_demo.h
 ..\obj\freertos_demo.o: ..\HARDWARE\KEY\key.h
 ..\obj\freertos_demo.o: ..\FreeRTOS\include\FreeRTOS.h
 ..\obj\freertos_demo.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stddef.h
@@ -45,3 +46,6 @@
 ..\obj\freertos_demo.o: ..\FreeRTOS\include\list.h
 ..\obj\freertos_demo.o: ..\HARDWARE\LED\led.h
 ..\obj\freertos_demo.o: ..\HARDWARE\TIMER\PWM.h
+..\obj\freertos_demo.o: ..\HARDWARE\I2C\myI2C.h
+..\obj\freertos_demo.o: ..\HARDWARE\I2C\dht20.h
+..\obj\freertos_demo.o: ..\SYSTEM\delay\Delay.h

@@ -28,17 +28,21 @@
 //V1.5修改说明
 //1,增加了对UCOSII的支持
 #define USART_REC_LEN  			200  	//定义最大接收字节数 200
+#define USART_PACK_LEN  			4  	//定义数据包长度
 #define EN_USART1_RX 			1		//使能（1）/禁止（0）串口1接收
 	  	
-extern u8  USART_RX_BUF[USART_REC_LEN]; //接收缓冲,最大USART_REC_LEN个字节.末字节为换行符 
+extern u8  USART_RX_BUF[]; //接收缓冲,最大USART_REC_LEN个字节.末字节为换行符 
 extern u16 USART_RX_STA;         		//接收状态标记	
-extern uint16_t test111[6];
+
+extern uint8_t RxData[];
+extern uint8_t TxData[];
+//extern uint16_t test111[6];
 //如果想串口中断接收，请不要注释以下宏定义
 void uart_init(u32 bound);
-void SendByte(USART_TypeDef* USARTx, uint16_t Data);
-void SendArray(USART_TypeDef* USARTx, uint16_t Data[], uint8_t length);
+void SendByte(USART_TypeDef* USARTx, uint8_t Data);
+void SendArray(USART_TypeDef* USARTx, uint8_t Data[], uint8_t length);
 void SendString(USART_TypeDef* USARTx, char *Data);
-
+void SendPack(USART_TypeDef* USARTx, uint8_t Data[]);
 
 #endif
 

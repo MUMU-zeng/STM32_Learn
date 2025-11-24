@@ -37,6 +37,7 @@
 ..\obj\queue.o: ..\SYSTEM\usart\usart.h
 ..\obj\queue.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\queue.o: ..\USER\freertos_demo.h
+..\obj\queue.o: ..\SYSTEM\usart\usart.h
 ..\obj\queue.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\queue.o: ..\FreeRTOS\include\portable.h
 ..\obj\queue.o: ..\FreeRTOS\include\deprecated_definitions.h

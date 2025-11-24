@@ -36,6 +36,7 @@
 ..\obj\stream_buffer.o: ..\SYSTEM\usart\usart.h
 ..\obj\stream_buffer.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\stream_buffer.o: ..\USER\freertos_demo.h
+..\obj\stream_buffer.o: ..\SYSTEM\usart\usart.h
 ..\obj\stream_buffer.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\stream_buffer.o: ..\FreeRTOS\include\portable.h
 ..\obj\stream_buffer.o: ..\FreeRTOS\include\deprecated_definitions.h

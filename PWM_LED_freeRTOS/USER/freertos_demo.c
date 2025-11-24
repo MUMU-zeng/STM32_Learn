@@ -25,6 +25,9 @@
 #include "task.h"
 #include "led.h"
 #include "PWM.h"
+#include "myI2C.h"
+#include "dht20.h"
+#include "Delay.h"
 /*****************************************************************************/
 /*FreeRTOS配置*/
 /*START_TASK任务配置
@@ -145,11 +148,11 @@ void task1(void* pvParameters)
 		//printf("led is light%d\r\n", sizeof(test111));
 		//USART_SendData(USART1, 0x41);
 		//SendArray(USART1, test111, 6);
-		SendString(USART1, "我是MUMU");
+		
 		vTaskDelay(500);
 	}
 }
-
+extern uint8_t data[6];
 void task2(void* pvParameters)
 {
 	while(1)
@@ -157,11 +160,12 @@ void task2(void* pvParameters)
 		test111[2]++;
 		if(test111[2] > 1000)	test111[2] = 0;
 		
-//		LED1 ? LED1_OFF : LED1_ON;
-		vTaskDelay(500);
+		
+		vTaskDelay(100);
 	}
 }
 
+uint8_t key0_out = 0;
 void task3(void* pvParameters)
 {
 	while(1)
@@ -169,14 +173,20 @@ void task3(void* pvParameters)
 		test111[0] = KEY0;
 		test111[3]++;
 		if(test111[3] > 1000)	test111[3] = 0;
-		if(KEY0)
+		
+		if(KEY0 != key0_out && KEY0)
 		{
-			if(Task1_Handler != NULL)
-			{
-				vTaskDelete(Task1_Handler);
-				Task1_Handler = NULL;
-			}
+			TxData[0] ++;
+			TxData[1] ++;
+			TxData[2] ++;
+			TxData[3] ++;
+			 
 		}
+		else if (KEY0 != key0_out && !KEY0)
+		{
+			SendPack(USART1, TxData);
+		}
+		key0_out = KEY0;
 		vTaskDelay(10);
 	}
 }

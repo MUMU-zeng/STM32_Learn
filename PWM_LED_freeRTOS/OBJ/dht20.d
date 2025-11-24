@@ -1,0 +1,37 @@
+..\obj\dht20.o: ..\HARDWARE\I2C\dht20.c
+..\obj\dht20.o: ..\HARDWARE\I2C\dht20.h
+..\obj\dht20.o: ..\USER\stm32f10x.h
+..\obj\dht20.o: ..\CORE\core_cm3.h
+..\obj\dht20.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\dht20.o: ..\USER\system_stm32f10x.h
+..\obj\dht20.o: ..\USER\stm32f10x_conf.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_adc.h
+..\obj\dht20.o: ..\USER\stm32f10x.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_bkp.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_can.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_cec.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_crc.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_dac.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_dma.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_exti.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_flash.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_fsmc.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_i2c.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_pwr.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_rtc.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_sdio.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_spi.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_tim.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
+..\obj\dht20.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\dht20.o: ..\SYSTEM\sys\sys.h
+..\obj\dht20.o: ..\SYSTEM\usart\usart.h
+..\obj\dht20.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\dht20.o: ..\USER\freertos_demo.h
+..\obj\dht20.o: ..\SYSTEM\usart\usart.h
+..\obj\dht20.o: ..\SYSTEM\delay\Delay.h
