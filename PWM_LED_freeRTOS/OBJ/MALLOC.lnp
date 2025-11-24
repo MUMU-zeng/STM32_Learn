@@ -9,6 +9,7 @@
 "..\obj\pwm.o"
 "..\obj\myi2c.o"
 "..\obj\dht20.o"
+"..\obj\mymath.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\usart.o"

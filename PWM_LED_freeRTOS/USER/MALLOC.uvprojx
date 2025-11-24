@@ -332,7 +332,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\KEY;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM3;..\HARDWARE\TIMER;..\USER;..\HARDWARE\I2C</IncludePath>
+              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\KEY;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM3;..\HARDWARE\TIMER;..\USER;..\HARDWARE\I2C;..\HARDWARE</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -429,6 +429,11 @@
               <FileName>dht20.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\I2C\dht20.c</FilePath>
+            </File>
+            <File>
+              <FileName>myMath.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\myMath.c</FilePath>
             </File>
           </Files>
         </Group>

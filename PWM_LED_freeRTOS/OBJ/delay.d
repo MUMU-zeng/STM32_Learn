@@ -30,13 +30,20 @@
 ..\obj\delay.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
 ..\obj\delay.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\delay.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\delay.o: ..\SYSTEM\usart\usart.h
+..\obj\delay.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\delay.o: ..\SYSTEM\sys\sys.h
+..\obj\delay.o: ..\USER\freertos_demo.h
+..\obj\delay.o: ..\SYSTEM\usart\usart.h
+..\obj\delay.o: ..\HARDWARE\KEY\key.h
+..\obj\delay.o: ..\HARDWARE\TIMER\timer.h
+..\obj\delay.o: ..\HARDWARE\TIMER\PWM.h
+..\obj\delay.o: ..\HARDWARE\I2C\myI2C.h
+..\obj\delay.o: ..\HARDWARE\I2C\dht20.h
+..\obj\delay.o: ..\HARDWARE\myMath.h
 ..\obj\delay.o: ..\FreeRTOS\include\FreeRTOS.h
 ..\obj\delay.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\delay.o: ..\FreeRTOS\include\FreeRTOSConfig.h
-..\obj\delay.o: ..\SYSTEM\usart\usart.h
-..\obj\delay.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
-..\obj\delay.o: ..\USER\freertos_demo.h
-..\obj\delay.o: ..\SYSTEM\usart\usart.h
 ..\obj\delay.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\delay.o: ..\FreeRTOS\include\portable.h
 ..\obj\delay.o: ..\FreeRTOS\include\deprecated_definitions.h

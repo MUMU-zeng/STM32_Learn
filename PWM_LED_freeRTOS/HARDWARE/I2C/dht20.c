@@ -14,29 +14,29 @@ void DHT20_W_Reg(uint8_t RegAddress, uint8_t Data)
 	I2C_GenerateSTART(I2C1, ENABLE);	//起始位
 	while(I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT) != SUCCESS)	//等待主机模式选择完成EV5事件
 	{
-		printf("W等待主机模式选择完成EV5事件……");
+//		printf("W等待主机模式选择完成EV5事件……");
 	}
 //	I2C_Send7bitAddress(I2C1, DHT20_ADDRESS, I2C_Direction_Transmitter);	//发送地址
 	I2C_SendData(I2C1, (DHT20_ADDRESS << 1));//发送地址
 	while(I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED) != SUCCESS)	
 	{//等待从机回应ACK，EV6事件
-		printf("W等待从机回应ACK1，EV6事件……");
+//		printf("W等待从机回应ACK1，EV6事件……");
 	}
 	I2C_SendData(I2C1, RegAddress);	//发送从设备寄存器地址
 	while(I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTING) != SUCCESS)	
 	{//字节正在发送，EV8事件
-		printf("W从设备寄存器地址正在发送，EV8事件……");
+//		printf("W从设备寄存器地址正在发送，EV8事件……");
 	}
 	I2C_SendData(I2C1, Data);	//发送要写入从设备寄存器地址的数据	注：每写/读一位，从设备指针自动后移一位
 	while(I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTING) != SUCCESS)	
 	{//等待移位完成，EV8_2事件
-		printf("W数据正在发送，等待EV8_2事件……");
+//		printf("W数据正在发送，等待EV8_2事件……");
 	}
 //	
 	I2C_SendData(I2C1, 0x00);	//发送要写入从设备寄存器地址的数据	注：每写/读一位，从设备指针自动后移一位
 	while(I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED) != SUCCESS)	
 	{//等待移位完成，EV8_2事件
-		printf("W数据正在发送，等待EV8_2事件……");
+//		printf("W数据正在发送，等待EV8_2事件……");
 	}
 	
 	I2C_GenerateSTOP(I2C1, ENABLE);
@@ -103,13 +103,13 @@ void DHT20_S_Reg(uint8_t RegAddress, uint8_t Data[])
 	I2C_GenerateSTART(I2C1, ENABLE);	//起始位
 	while(I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT) != SUCCESS)	//等待主机模式选择完成EV5事件
 	{
-		printf("等待主机模式选择完成EV5事件……");
+//		printf("等待主机模式选择完成EV5事件……");
 	}
 	
 	I2C_SendData(I2C1, RegAddress);	//接收模式
 	while(I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED) != SUCCESS)	//等待主机模式选择完成EV5事件
 	{
-		printf("等待建立通信完成EV6事件……");
+//		printf("等待建立通信完成EV6事件……");
 	}
 	
 	for(int i = 0; i < 5; i++)

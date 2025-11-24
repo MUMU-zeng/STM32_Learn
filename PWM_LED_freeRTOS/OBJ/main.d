@@ -30,9 +30,9 @@
 ..\obj\main.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
 ..\obj\main.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\main.o: ..\STM32F10x_FWLib\inc\misc.h
-..\obj\main.o: ..\SYSTEM\delay\delay.h
 ..\obj\main.o: ..\SYSTEM\usart\usart.h
 ..\obj\main.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\main.o: ..\SYSTEM\sys\sys.h
 ..\obj\main.o: ..\USER\freertos_demo.h
 ..\obj\main.o: ..\SYSTEM\usart\usart.h
 ..\obj\main.o: ..\HARDWARE\KEY\key.h
@@ -40,3 +40,5 @@
 ..\obj\main.o: ..\HARDWARE\TIMER\PWM.h
 ..\obj\main.o: ..\HARDWARE\I2C\myI2C.h
 ..\obj\main.o: ..\HARDWARE\I2C\dht20.h
+..\obj\main.o: ..\HARDWARE\myMath.h
+..\obj\main.o: ..\SYSTEM\delay\delay.h

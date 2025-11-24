@@ -30,3 +30,14 @@
 ..\obj\myi2c.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\myi2c.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\myi2c.o: ..\SYSTEM\sys\sys.h
+..\obj\myi2c.o: ..\SYSTEM\usart\usart.h
+..\obj\myi2c.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\myi2c.o: ..\SYSTEM\sys\sys.h
+..\obj\myi2c.o: ..\USER\freertos_demo.h
+..\obj\myi2c.o: ..\SYSTEM\usart\usart.h
+..\obj\myi2c.o: ..\HARDWARE\KEY\key.h
+..\obj\myi2c.o: ..\HARDWARE\TIMER\timer.h
+..\obj\myi2c.o: ..\HARDWARE\TIMER\PWM.h
+..\obj\myi2c.o: ..\HARDWARE\I2C\myI2C.h
+..\obj\myi2c.o: ..\HARDWARE\I2C\dht20.h
+..\obj\myi2c.o: ..\HARDWARE\myMath.h

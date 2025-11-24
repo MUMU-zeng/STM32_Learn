@@ -35,8 +35,15 @@
 ..\obj\list.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\list.o: ..\SYSTEM\usart\usart.h
 ..\obj\list.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\list.o: ..\SYSTEM\sys\sys.h
 ..\obj\list.o: ..\USER\freertos_demo.h
 ..\obj\list.o: ..\SYSTEM\usart\usart.h
+..\obj\list.o: ..\HARDWARE\KEY\key.h
+..\obj\list.o: ..\HARDWARE\TIMER\timer.h
+..\obj\list.o: ..\HARDWARE\TIMER\PWM.h
+..\obj\list.o: ..\HARDWARE\I2C\myI2C.h
+..\obj\list.o: ..\HARDWARE\I2C\dht20.h
+..\obj\list.o: ..\HARDWARE\myMath.h
 ..\obj\list.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\list.o: ..\FreeRTOS\include\portable.h
 ..\obj\list.o: ..\FreeRTOS\include\deprecated_definitions.h

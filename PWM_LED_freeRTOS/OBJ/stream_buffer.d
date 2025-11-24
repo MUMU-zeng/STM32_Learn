@@ -35,8 +35,15 @@
 ..\obj\stream_buffer.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\stream_buffer.o: ..\SYSTEM\usart\usart.h
 ..\obj\stream_buffer.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\stream_buffer.o: ..\SYSTEM\sys\sys.h
 ..\obj\stream_buffer.o: ..\USER\freertos_demo.h
 ..\obj\stream_buffer.o: ..\SYSTEM\usart\usart.h
+..\obj\stream_buffer.o: ..\HARDWARE\KEY\key.h
+..\obj\stream_buffer.o: ..\HARDWARE\TIMER\timer.h
+..\obj\stream_buffer.o: ..\HARDWARE\TIMER\PWM.h
+..\obj\stream_buffer.o: ..\HARDWARE\I2C\myI2C.h
+..\obj\stream_buffer.o: ..\HARDWARE\I2C\dht20.h
+..\obj\stream_buffer.o: ..\HARDWARE\myMath.h
 ..\obj\stream_buffer.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\stream_buffer.o: ..\FreeRTOS\include\portable.h
 ..\obj\stream_buffer.o: ..\FreeRTOS\include\deprecated_definitions.h

@@ -32,6 +32,13 @@
 ..\obj\dht20.o: ..\SYSTEM\sys\sys.h
 ..\obj\dht20.o: ..\SYSTEM\usart\usart.h
 ..\obj\dht20.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\dht20.o: ..\SYSTEM\sys\sys.h
 ..\obj\dht20.o: ..\USER\freertos_demo.h
 ..\obj\dht20.o: ..\SYSTEM\usart\usart.h
+..\obj\dht20.o: ..\HARDWARE\KEY\key.h
+..\obj\dht20.o: ..\HARDWARE\TIMER\timer.h
+..\obj\dht20.o: ..\HARDWARE\TIMER\PWM.h
+..\obj\dht20.o: ..\HARDWARE\I2C\myI2C.h
+..\obj\dht20.o: ..\HARDWARE\I2C\dht20.h
+..\obj\dht20.o: ..\HARDWARE\myMath.h
 ..\obj\dht20.o: ..\SYSTEM\delay\Delay.h

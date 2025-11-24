@@ -1,13 +1,7 @@
 #include "led.h"
 #include "delay.h"
 #include "sys.h"
-#include "usart.h"
-#include "key.h"
-#include "timer.h"
-#include "freertos_demo.h"
-#include "PWM.h"
-#include "myI2C.h"
-#include "dht20.h"
+
 //ALIENTEK Mini STM32开发板范例代码27
 //内存管理实验  
 //技术支持：www.openedv.com
@@ -15,13 +9,9 @@
 
 u16 key, status;
 uint8_t data[6];
+float humidity,temperature;
 int main(void)
 { 
-		 
-	u8 i=0;	    
-	u8 *p=0;
-	u8 *tp=0;
-	u8 paddr[18];			//存放P Addr:+p地址的ASCII值 
 
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);// 设置中断优先级分组2
 	delay_init();	    	 //延时函数初始化	  
@@ -54,8 +44,8 @@ int main(void)
 		delay_ms(100);
 		// 读取数据
 		DHT20_S_Reg(0x71, data);
-		
-		
+		get_hum_temp(&humidity, &temperature, data);
+		printf("湿度为%5.2f,温度为%5.2f", humidity, temperature);
 		delay_ms(2000); // 2秒测量一次
 		
 	}

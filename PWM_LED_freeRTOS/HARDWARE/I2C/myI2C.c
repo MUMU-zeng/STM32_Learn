@@ -18,7 +18,7 @@ void IIC_init(void)
 	
 	
 	I2C_InitStructer.I2C_Mode 								= I2C_Mode_I2C;	//模式
-	I2C_InitStructer.I2C_ClockSpeed 					= 100000;	//时钟速度，最大400000
+	I2C_InitStructer.I2C_ClockSpeed 					= 200000;	//时钟速度，最大400000
 	I2C_InitStructer.I2C_DutyCycle 						= I2C_DutyCycle_2;	//占空比
 	I2C_InitStructer.I2C_Ack 									= I2C_Ack_Enable;	//接收字节后给从机Ack应答使能
 	I2C_InitStructer.I2C_AcknowledgedAddress 	= I2C_AcknowledgedAddress_7bit;	//作为从机时，地址字节多少位

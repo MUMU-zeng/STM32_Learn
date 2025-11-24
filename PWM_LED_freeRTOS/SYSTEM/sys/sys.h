@@ -1,6 +1,14 @@
 #ifndef __SYS_H
 #define __SYS_H	
 #include "stm32f10x.h"
+#include "usart.h"
+#include "key.h"
+#include "timer.h"
+#include "freertos_demo.h"
+#include "PWM.h"
+#include "myI2C.h"
+#include "dht20.h"
+#include "myMath.h"//计算api函数
 //////////////////////////////////////////////////////////////////////////////////	 
 //本程序只供学习使用，未经作者许可，不得用于其它任何用途
 //ALIENTEK STM32开发板		   

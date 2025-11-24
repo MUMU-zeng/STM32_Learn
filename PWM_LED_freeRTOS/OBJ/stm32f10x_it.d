@@ -30,3 +30,14 @@
 ..\obj\stm32f10x_it.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\stm32f10x_it.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\stm32f10x_it.o: ..\SYSTEM\sys\sys.h
+..\obj\stm32f10x_it.o: ..\SYSTEM\usart\usart.h
+..\obj\stm32f10x_it.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\stm32f10x_it.o: ..\SYSTEM\sys\sys.h
+..\obj\stm32f10x_it.o: ..\USER\freertos_demo.h
+..\obj\stm32f10x_it.o: ..\SYSTEM\usart\usart.h
+..\obj\stm32f10x_it.o: ..\HARDWARE\KEY\key.h
+..\obj\stm32f10x_it.o: ..\HARDWARE\TIMER\timer.h
+..\obj\stm32f10x_it.o: ..\HARDWARE\TIMER\PWM.h
+..\obj\stm32f10x_it.o: ..\HARDWARE\I2C\myI2C.h
+..\obj\stm32f10x_it.o: ..\HARDWARE\I2C\dht20.h
+..\obj\stm32f10x_it.o: ..\HARDWARE\myMath.h

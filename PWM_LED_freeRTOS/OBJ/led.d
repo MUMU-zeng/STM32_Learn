@@ -30,3 +30,14 @@
 ..\obj\led.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
 ..\obj\led.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\led.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\led.o: ..\SYSTEM\usart\usart.h
+..\obj\led.o: D:\Program Files(64bit)\Keil5\exe\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\led.o: ..\SYSTEM\sys\sys.h
+..\obj\led.o: ..\USER\freertos_demo.h
+..\obj\led.o: ..\SYSTEM\usart\usart.h
+..\obj\led.o: ..\HARDWARE\KEY\key.h
+..\obj\led.o: ..\HARDWARE\TIMER\timer.h
+..\obj\led.o: ..\HARDWARE\TIMER\PWM.h
+..\obj\led.o: ..\HARDWARE\I2C\myI2C.h
+..\obj\led.o: ..\HARDWARE\I2C\dht20.h
+..\obj\led.o: ..\HARDWARE\myMath.h
